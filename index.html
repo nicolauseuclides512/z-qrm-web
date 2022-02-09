@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cek Ongkos Kirim & Resi Qirim</title>
+    <!--style dependency-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+    <meta name="description"
+          content="Qirim memberikan kemudahan untuk mengetahui ongkos kirim hingga level kecamatandari berbagai kurir kesayangan kamu. Melalui Qirim kamu bisa scan resi dengan barcode di perangkat android yang kamu miliki, sehingga mempermudah kamu melihat stasus pengiriman paket secara real time."/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index-min.css">
+    <link rel="icon" type="image/png" sizes="30x31" href="asset_qirim/q.png">
+</head>
+
+<body>
+<div id="topbar">
+    <div class="container col-md-12" id="nav1" style="padding: 0%;">
+        <nav class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand-centered" href="#">
+                <img src="asset_qirim/qirim_green.png" class="img-thumbnail1">
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div id="main" role="main">
+    <div class="content-mobile">
+        <a href="http://bit.ly/QirimApp" target="_blank">
+            <img src="asset_qirim/banner_qirim.png"/>
+        </a>
+    </div>
+    <div class="tab">
+        <button class="tablinks active" id="ongkirWidget" onclick="openWidget(event,'widgetOngkir')">Cek Ongkir</button>
+        <button class="tablinks" id="resiWidget" onclick="openWidget(event,'widgetResi')">Cek Resi</button>
+    </div>
+
+    <div id="widgetOngkir" class="tabcontent" style="display: block">
+        <div id="zuragan-ongkir-widget"></div>
+    </div>
+    <div id="widgetResi" class="tabcontent">
+        <div id="zuragan-resi-widget"></div>
+    </div>
+    <div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12" id="carriers_list">
+                <a href="https://qirim.id/alamat-agen-jne">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/jne_id_xs.png"
+                         class="img-thumbnail1" id="jne"/>
+                </a>
+                <a href="https://qirim.id/alamat-agen-tiki">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/tiki_id_xs.png"
+                         class="img-thumbnail1" id="tiki"/>
+                </a>
+                <a href="https://qirim.id/alamat-cabang-jet-express/">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/jnt_id_xs.png"
+                         class="img-thumbnail1" id="jnt"/>
+                </a>
+                <a href="https://qirim.id/alamat-pos-indonesia/">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/pos_id_xs.png"
+                         class="img-thumbnail1" id="pos"/>
+                </a>
+                <a href="https://qirim.id/alamat-cabang-sicepat/">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/sicepat_id_xs.png"
+                         class="img-thumbnail1" id="sicepat"/>
+                </a>
+                <a href="https://qirim.id/alamat-cabang-pandu-logistic/">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/pandu_id_xs.png"
+                         class="img-thumbnail1" id="pandu"/>
+                </a>
+                <a href="https://qirim.id/alamat-agen-wahana/">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/sahitotest/assets/carriers/wahana_id_xs.png"
+                         class="img-thumbnail1" id="wahana"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12" id="carriers_add">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-lion-parcel">Lion
+                        Parcel</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-first-logistic">First
+                        Logistics</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-indah-logistic-cargo">Indah
+                        Logistic</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-sap-express">SAP
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/nss-express">NSS</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a
+                            href="https://qirim.id/alamat-agen-cabang-pcp-express/">PCP</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/cabang-esl-express/">ESL
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-ritra-cargo/">Ritra
+                        Cargo</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/dakota-cargo">Dakota</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/cito-xpress">CitoXpress</a>
+                    </h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/dhl">DHL</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/herona-express">Herona</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/expedisi-rcl">RCL</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-ncs">NCS</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/fedex-express">FedEx</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/rpx-indonesia">RPX</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="http://zuragan.com/kantor-pusat-xtrans/">Xtrans</a>
+                    </h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-kobra-express/">Kobra
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-mps/">MPS</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/sentral-cargo-roxy/">Sentral
+                        Cargo</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a
+                            href="https://qirim.id/kantor-pusat-lega-paket-bandung/">Lega Paket</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-baraya-express">Baraya</a>
+                    </h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-ninja-express/">Ninja
+                        Express </a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/21-express">21 Express</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-pahala-express/">Pahala
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/expedito/">Expedito</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/atri-xpress/">Atri Express</a>
+                    </h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/cahaya-logistik-indonesia/">Cahaya
+                        Logistik</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-star-cargo/">Star
+                        Cargo</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-solusi-express">Solusi
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-ark-xpress">ARK
+                        Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/kantor-pusat-mex">MEX</a></h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/alamat-indah-jaya-express/">Indah
+                        Jaya Express</a></h4></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h4><a href="https://qirim.id/pt-royal-express-indonesia/">Royal
+                        Express Indonesia</a></h4></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bottombar">
+    <div class="container col-md-12" id="nav1" style="padding: 0%">
+        <nav class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand-centered" href="https://zuragan.com" target="_blank">
+                <img src="asset_qirim/zuragan.png" class="img-thumbnail1">
+            </a>
+        </nav>
+    </div>
+</div>
+<script src="unused/jquery-min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function openWidget(evt, widgetName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(widgetName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    var initialScreenSize = window.innerHeight;
+    window.addEventListener("resize", function () {
+        if (window.innerHeight < initialScreenSize) {
+            $("#bottombar").hide();
+        } else {
+            $("#bottombar").show();
+        }
+    });
+</script>
+<!--script dependency-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>-->
+<!--<script async type="text/javascript" src="js/jquery.js"></script>-->
+<!--<script type="text/javascript"-->
+        <!--src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>-->
+<script async type="text/javascript" src="unused/bootstrap3-typeahead-min.js"></script>
+<!--<script type="text/javascript"-->
+<!--src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>-->
+<script type="text/javascript" src="zuragan-resi-widget.js"></script>
+<script type="text/javascript" src="zuragan-ongkir-widget.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-120439838-1"></script>
+<!--<script>-->
+    <!--window.dataLayer = window.dataLayer || [];-->
+
+    <!--function gtag() {-->
+        <!--dataLayer.push(arguments);-->
+    <!--}-->
+
+    <!--gtag('js', new Date());-->
+
+    <!--gtag('config', 'UA-120439838-1');-->
+<!--</script>-->
+<!--<script type="text/javascript" src="js/google-analytics.min.js"></script>-->
+
+</body>
+
+</html>
